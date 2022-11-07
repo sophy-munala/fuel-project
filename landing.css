@@ -1,0 +1,131 @@
+*{
+    font-family: montserrat;
+}
+
+:root{
+
+    --light-color: #666;
+    --orange: #ff7800;
+    --black:#333;
+    --red:#c0392b;
+    --light-bg:#f5f5f5;
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    --border:.2rem solid rgba(0, 0, 0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover: 1rem solid #130f41;
+}
+body{
+    background: f1fbff;
+}
+.btn
+{
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding:  1rem 3rem;
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;
+    text-transform: none;
+    border-radius: .5rem;
+    text-decoration: none;
+    border: var(--border);
+        
+}
+.btn:hover
+{
+    background-color: var(--black);
+}
+.btn{
+    background-color: var(--orange);
+}
+
+.section-padding{
+    padding: 100px 0;
+}
+.carousel-item{
+   height: 130vh;
+   min-height: 300px;
+}
+.carousel-caption{
+    bottom: 220px;
+    z-index: 3;
+}
+.carousel-caption h3{
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2.3;
+    margin-top: 25px;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.carousel-inner::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0, 0, 0, 0.7);
+    z-index: 1;
+}
+.navbar-nav a{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.navbar-light .navbar-brand{
+    color: #000;
+    letter-spacing: 2;
+    font-weight: 700;
+    font-size: 27px;
+    text-transform: uppercase;
+}
+.navbar-light .navbar-brand span{
+    color: var(--orange);
+}
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover{
+    color: #000;
+}
+.navbar-light .navbar-nav .navbar-link{
+    color: #000;
+}
+.works .class-body i{
+     font-size: 50px;
+     
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991){
+    .carousel-caption{
+        bottom: 370px;
+    }
+    .carousel-caption p{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 767px){
+    .navbar-nav{
+        text-align: center;
+    }
+    .carousel-caption{
+        bottom: 125px;
+    }
+    .carousel-caption h3{
+        font-size: 17px;
+    }
+    .carousel-caption a{
+        padding: 10px 15px;
+    }
+    .carousel-caption p{
+        width: 100%;
+        line-height: 1.5;
+        font-size: 12px;
+
+    }
+}
