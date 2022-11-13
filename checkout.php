@@ -102,15 +102,15 @@ if (isset($_POST['order_now'])) {
             <div class="flex">
                 <div class="inputbox">
                     <span>Name</span>
-                    <input type="text" name="name" placeholder=" your name">
+                    <input type="text" name="name" placeholder=" your name" required>
                 </div>
                 <div class="inputbox">
                     <span>Email:</span>
-                    <input type="email" name="email" placeholder=" your email">
+                    <input type="email" name="email" placeholder=" your email" required>
                 </div>
                 <div class="inputbox">
                     <span> Number</span>
-                    <input type="number" name="tel_no" placeholder=" your number">
+                    <input type="number" name="tel_no" placeholder=" your number" required>
                 </div>
                
                 <div class="inputbox">
@@ -123,15 +123,15 @@ if (isset($_POST['order_now'])) {
                 </div>
                 <div class="inputbox">
                     <span>Address line 1:</span>
-                    <input type="number" name="flat" min="0" placeholder=" e.g flat no.">
+                    <input type="number" name="flat" min="0" placeholder=" e.g flat no." required>
                 </div>
                 <div class="inputbox">
                     <span>Address line 2:</span>
-                    <input type="text" name="street" min="0" placeholder=" e.g street name">
+                    <input type="text" name="street" min="0" placeholder=" e.g street name" required>
                 </div>
                 <div class="inputbox">
                     <span>County:</span>
-                    <input type="text" name="county" placeholder=" e.g your county">
+                    <input type="text" name="county" placeholder=" e.g your county" required>
                 </div>
             </div>
             <input type="submit" value="Order now" class="btn" name="order_now">

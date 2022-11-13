@@ -11,9 +11,12 @@ if (!isset($customer_id)) {
 
 if(isset($_POST['add_to_cart'])){
 	$product_name = $_POST['product_name'];
+	$product_description = $_POST['product_description'];
 	$product_price = $_POST['product_price'];
 	$product_image = $_POST['product_image'];
 	$product_quantity = $_POST['product_quantity'];
+	$old_product_quantity ;
+	$product_q_id ;
 
 	$check_cart_numbers = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name' AND customer_id = '$customer_id'")or die ('query failed');
 
@@ -63,11 +66,28 @@ if(isset($_POST['add_to_cart'])){
 			<form action="" method="post" class="box">
 			<img src="image/<?php echo $fetch_products['image'];?>" alt="">
 			<div class="name"><?php echo $fetch_products['name'];?></div>
+			<div class="description"><?php echo $fetch_products['description'];?></div>
 			<div class="price"><?php echo $fetch_products['price'];?>/-</div>
-			<input type="number" placeholder="quantity" min="10" name="product_quantity"  class="qty">
+			<input type="number" placeholder="quantity" min="20" name="product_quantity"  class="qty">
 			<input type="hidden" name="product_name" value="<?php echo $fetch_products['name'];?>">
+			<input type="hidden" name="product_description" value="<?php echo $fetch_products['description'];?>">
 			<input type="hidden" name="product_price" value="<?php echo $fetch_products['price'];?>">
 			<input type="hidden" name="product_image" value="<?php echo $fetch_products['image'];?>"><br>
+			<p>Available: <span style="color:<?php if ($fetch_products ['quantity'] >= '1'){echo 'in stock';}else{echo'out of stoch';}?>;"><?php echo $fetch_products['quantity'];?></span></p>
+			  
+			  <?php
+			  	$product_q_id = 0;
+				$old_product_quantity = 0;
+				$fetch_products['quantity'] = $old_product_quantity;
+				echo "$fetch_products['quantity']";
+				//echo "$old_product_quantity";
+				//echo "$product_quantity"
+				//$fetch_products['product_id'] = $product_q_id;
+				//$old_product_quantity - $product_quantity = $old_product_quantity;
+				//mysqli_query($conn, "UPDATE `products` SET
+				//quantity = '$old_product_quantity',  WHERE product_id = '$product_q_id'")or die('query failed');
+			      
+			  ?>
 			<input type="submit" value="add to cart" name="add_to_cart" class="btn">
 			</form>
 			<?php
@@ -91,7 +111,10 @@ if(isset($_POST['add_to_cart'])){
 			</div>
 			<div class="content">
 				<h3>Gasolina Patner</h3>
-				<p>gewyghbfhvwedyfeudnbhdgetgvwjhbsduyghwbajkhuygcwfgednmmmmmmmmmgvbn chygjkwakigeghbdbhhgghcvbcnbsujyegvjkduiwrydfwuodhpiebkhewvj encioewyfiyehcbkjmcopuiudgwejhbc,msqncjuqgdy2ehd92wjdp3tr73egfpowejkfierfhsdcndjgfetfyoi</p>
+				<p>Morbi sit amet mollis est. Nulla facilisi. Phasellus ultrices faucibus leo a vulputate. 
+				In nec imperdiet tellus, ac accumsan ipsum. Integer dictum vitae sem vel vehicula. Suspendisse potenti.
+				 Morbi elit lorem, congue a ipsum sed, cursus commodo est. 
+				Vivamus finibus pharetra purus, quis dignissim dui pretium tempus.</p>
 				<a href="about.php" class="btn">read more</a>
 
 			</div>

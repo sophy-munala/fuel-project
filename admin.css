@@ -285,10 +285,23 @@ section{
 }
 .show-products .box-container .box img{
     height: 19rem;
+    margin: 1rem 0;
+    height: 25rem;
+    width: 25rem;
 }
 .show-products .box-container .box .name{
     padding: 1rem 0;
     font-size: 2.5rem;
+    color: black;
+}
+.show-products .box-container .box .description{
+    padding: 1rem 0;
+    font-size: 2.2rem;
+    color: black;
+}
+.show-products .box-container .box .quantity{
+    padding: 1rem 0;
+    font-size: 2.2rem;
     color: black;
 }
 .show-products .box-container .box .price{

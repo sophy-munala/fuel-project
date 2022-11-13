@@ -27,7 +27,7 @@ if(!isset($attendant_id)){
 
         <!--show the products-->
           <section class="show-products">
-             <h1 class="heading"> products Added</h1>
+             <h1 class="heading">  Fuel products Added</h1>
             <div class="box-container">
                 <?php 
                    $select_products = mysqli_query($conn, "SELECT * FROM `products`")or die('query failed');
@@ -38,6 +38,8 @@ if(!isset($attendant_id)){
                  <div class="box">
                      <img src="image/<?php echo $fetch_products['image']; ?>">
                      <div class="name"><?php echo $fetch_products['name']; ?></div>
+                     <div class="descrption"><?php echo $fetch_products['description'];?></div>
+                     <p><span>Availability: </span>In stock</p>
                      <div class="price"><?php echo $fetch_products['price']; ?>/-</div>
                      
                  </div>
@@ -50,7 +52,9 @@ if(!isset($attendant_id)){
                   ?>
             </div>
         </section>
+        <br>
         <section class="show-products">
+        <h1 class="heading"> Automotive products Added</h1>
             <div class="box-container">
                 <?php 
                    $select_products = mysqli_query($conn, "SELECT * FROM `automotive`")or die('query failed');
@@ -61,7 +65,8 @@ if(!isset($attendant_id)){
                  <div class="box">
                      <img src="image/<?php echo $fetch_products['image']; ?>">
                      <div class="name"><?php echo $fetch_products['name']; ?></div>
-                     <div class="name"><?php echo $fetch_products['description'];?></div>
+                     <div class="description"><?php echo $fetch_products['description'];?></div>
+                     <p><span>Availability: </span>In stock</p>
                      <div class="price"><?php echo $fetch_products['price']; ?>/-</div>
                      
                  </div>

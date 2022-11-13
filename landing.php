@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="landing.css">
+   
         
 
     <title>Landing Page</title>
@@ -34,11 +35,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#services">Services</a>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link" href="#">Facts</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Asked Questions</a>
+          <a class="nav-link" href="#FAQS">FAQS</a>
         </li>
          
       </ul>
@@ -59,8 +58,8 @@
       <img src="image/f.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption">
       <h3>Best<span> automotive & fuel delivery </span>at your door step</h3>
-		<p>We source our fuel from the best and trusted fuel company near you</p>
-         <a href="customer_login.php" class="btn">Discover More</a>
+		    <p>We source our fuel from the best and trusted fuel company near you</p>
+         <a href="customer_login.php" class="btn">Order Now</a>
       </div>
     </div>
     <div class="carousel-item">
@@ -104,8 +103,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-header text-center pb-5">
-                    <h2>How it works</h2>
-                    <p>Make your orders and get fuel delivered at your door step</p>
+                <h1 class="heading">How <span> It Works</span></h1>
+                    <h3>Make your orders and get fuel delivered at your door step</h3>
                 </div>
             </div>
         </div>
@@ -169,9 +168,12 @@
     </div>
 </section>
 
+<br><br>
+
 <!-- services section-->
 <section class="service" id="services">
 		<h1 class="heading">our <span> services</span></h1>
+    <h3 style="text-align: center;">Our on demand free services</h3>
 		  <div class="box-container">
 			  <div class="box">
 				  <img src="image/lorry.jpg">
@@ -199,7 +201,7 @@
 				      </span>
 				   <p class="read-more-btn">read more...</p>
 			</div>
-      
+
 			<div class="box">
 				<img src="image/tyre.jpg">
 				<h3>Tyre Change</h3>
@@ -227,9 +229,89 @@
 		</div>
 	</section>
 
-    
+  <!--asked questions-->
+  
+  <section class="faqs-container" id="FAQS">
+  <h1 class="heading">Common <span> Asked Questions</span></h1>
+    <h3 style="text-align: center;">Can't find answers to your questions?</h3>
+    <div class="questions-container">
+      <div class="content-container">
+        <div class="faqs-header">
+          <h3>What is Gasolina Patner?</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+        <div class="content">
+          <p>Proin convallis pulvinar sodales. Duis eget dui tincidunt, eleifend dolor vitae, feugiat diam. 
+					Curabitur pulvinar nibh a scelerisque vulputate. Nulla facilisi. Aliquam egestas orci nunc, non congue lectus eleifend quis. 
+					Aenean aliquet tortor ut eros sollicitudin,</p>
+          <p>id scelerisque velit ornare. Aenean ante mauris, iaculis et urna at, tempor posuere erat</p>
+        </div>
+      </div>
 
-   
+      <div class="questions-container">
+         <div class="content-container">
+            <div class="faqs-header">
+              <h3>What areas does Gasolina Patners serve?</h3>
+               <span class="open active">+</span>
+               <span class="close">-</span>
+            </div>
+        <div class="content">
+          <p>Proin convallis pulvinar sodales. Duis eget dui tincidunt, eleifend dolor vitae, feugiat diam. 
+					Curabitur pulvinar nibh a scelerisque vulputate. Nulla facilisi. Aliquam egestas orci nunc, non congue lectus eleifend quis. 
+					Aenean aliquet tortor ut eros sollicitudin,</p>
+          <p>id scelerisque velit ornare. Aenean ante mauris, iaculis et urna at, tempor posuere erat</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="questions-container">
+         <div class="content-container">
+            <div class="faqs-header">
+              <h3>Where does Gasolina Patner source its fuel?</h3>
+               <span class="open active">+</span>
+               <span class="close">-</span>
+            </div>
+        <div class="content">
+          <p>Gasolina Patner sources fuel from Total Fuel Company which is an authorized and the selected dealers of oil company which has dominated
+					over the other fuel companies in Trans-Nzoia County.</p>
+          <p>We follow a strict quality assurance program to ensure every drop of fuel is checked for quality before it gets loaded into our Refuellers for delivery.
+				  We do not purchase or stock fuel prior to delivery. Fuel is sourced only upon receiving orders from customers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="questions-container">
+         <div class="content-container">
+            <div class="faqs-header">
+              <h3>What are the safety measures</h3>
+               <span class="open active">+</span>
+               <span class="close">-</span>
+            </div>
+        <div class="content">
+          <p>LPG is also being delivered to many consumers in metro cities through piped connection to the consumer's kitchen. 
+            In comparison, we carry the delivery of liquid fuel in small tanks of less than 2,000 Litre capacity. 
+            Diesel and Petrol are not pressurized and are much safer to transport, 
+            especially in small quantities.</p>
+          <p>Our Operators are IRTE trained, in addition to being extensively training on the safe handling of fuel. 
+            Our Refuellers are designed and fabricated as per guidelines in the Petroleum Act and Rules by PESO. 
+            Additionally, they are equipped with spill containment kits, fire extinguishers, 
+            and first aid to ensure complete compliance and safety.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+
+  <script src="faqs.js"></script>
+  <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
    

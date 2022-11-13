@@ -17,6 +17,20 @@
 body{
     background: f1fbff;
 }
+.heading{
+    text-align: center;
+    padding: 2.2rem 0;
+    padding-bottom: 3.3rem;
+    font-size: 3.6rem;
+    color: black;
+}
+.heading span{
+    background: #cc9900;
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 1% 1%);
+}
 .btn
 {
     display: inline-block;
@@ -99,6 +113,105 @@ body{
      font-size: 50px;
      
 }
+/*service section*/
+.service .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.2rem;
+}
+.service .box-container .box{
+    padding: 2rem 2rem;
+    background: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+.service .box-container .box:hover{
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
+.service .box-container .box img{
+    margin: 1rem 0;
+    height: 15rem;
+}
+.service .box-container .box h3{
+    font-size: 2.6rem;
+    line-height: 1.9;
+    color: black;
+}
+.service .box-container .box p{
+    font-size: 1.6rem;
+    line-height: 1.9;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+.service .box-container .box .read-more-btn{
+    color: blue;
+}
+.service .box-container .box .read-more-text{
+    display: none;
+    
+}
+.service .box-container .box .read-more-text--show{
+    display: inline;
+}
+
+/*faqs section*/
+.faqs-container{
+    font-family: "Roboto",sans-serif;
+    max-width: 700;
+    margin: 0 auto;
+}
+.faqs-container .questions-container{
+    box-shadow: 0 4px 8px -3px rgba(0,0,0,0.3);
+}
+/*.faqs-container h1{
+    font-size: 30px;
+    padding: 4px 32px;
+
+}*/
+.faqs-container .faqs-header{
+    display: flex;
+    background:grey;
+    align-items: center;
+    color: #f1faee;
+    position: relative;
+    cursor: pointer;
+}
+.faqs-container .faqs-header .open,
+.faqs-container .faqs-header .close{
+    position: absolute;
+    right: 0;
+    padding: 0 34px;
+    font-size: 30px;
+    font-weight: bold;
+    transform: translateY(-8px);
+    opacity: 0;
+    transition: all 500ms;
+}
+.faqs-container .faqs-header .open.active,
+.faqs-container .faqs-header .close.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+.faqs-container .faqs-header h3{
+    font-size: 35px;
+    padding: 0 32px;
+}
+.faqs-container .content{
+    line-height: 2;
+    padding: 0 32px;
+    background: #fdfffc;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 500ms;
+}
+.faqs-container .content.active{
+    max-height: 600px;
+
+}
+
 
 
 @media only screen and (min-width: 768px) and (max-width: 991){

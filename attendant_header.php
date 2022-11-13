@@ -14,8 +14,8 @@
 
 		<nav class="navbar">
 			<a href="attendant_page.php">Home</a>
-			<a href="att_products.php">Product</a>
-			<a href="att_orders.php">Orders</a>			
+			<a href="attendant_view_products.php">Product</a>
+			<a href="attendant_placed_orders.php">Orders</a>			
 			<a href="att_station.php">Station</a>
 		</nav>
 		<div class="icons">

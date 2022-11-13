@@ -17,6 +17,13 @@ if (isset($_POST['update_dispatch'])) {
     mysqli_query($conn, "UPDATE `orders` SET dispatch_status = '$update_delivery' WHERE order_id = '$order_update_id'")or die('query failed');
     $message[] = 'dispatch status has been updated!!';
 }
+
+if (isset($_GET['delete'])) {
+    // code...
+    $delete_id = $_GET['delete'];
+    mysqli_query($conn, "DELETE FROM `orders` WHERE order_id = '$delete_id'")or die('query failed');
+    header('location:attendant_placed_orders.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -67,6 +74,7 @@ if (isset($_POST['update_dispatch'])) {
                         </select>
 
                         <input type="submit" value="update" name="update_dispatch" class="btn">
+                        <a href="attendant_placed_orders.php?delete=<?php echo $fetch_orders['order_id'];?>" onclick = "return confirm('are you sure you want to delete this order?');" class="delete-btn">delete</a>
 
                     </form>
           

@@ -50,6 +50,8 @@ if (!isset($customer_id)) {
             <p>Placed on: <span><?php echo $fetch_orders['placed_on'];?></span></p>
             <p>Total price: <span><?php echo $fetch_orders['total_price'];?>/-</span></p>
             <p>Payment status: <span style="color:<?php if ($fetch_orders ['payment_status'] == 'pending'){echo 'red';}else{echo'orange';}?>;"><?php echo $fetch_orders['payment_status'];?></span></p>
+            <p>Delivery status: <span style="color:<?php if ($fetch_orders ['dispatch_status'] == 'delayed'){echo 'red';}else{echo'green';}?>;"><?php echo $fetch_orders['dispatch_status'];?></span></p>
+            
             </div>
              <?php
              }
