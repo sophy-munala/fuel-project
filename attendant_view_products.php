@@ -67,6 +67,7 @@ if(!isset($attendant_id)){
                      <div class="name"><?php echo $fetch_products['name']; ?></div>
                      <div class="description"><?php echo $fetch_products['description'];?></div>
                      <p><span>Availability: </span>In stock</p>
+                     <p>Available: <span style="color:<?php if ($fetch_products ['quantity'] >= '1'){echo 'in stock';}else{echo'out of stoch';}?>;"><?php echo $fetch_products['quantity'];?></span></p>
                      <div class="price"><?php echo $fetch_products['price']; ?>/-</div>
                      
                  </div>

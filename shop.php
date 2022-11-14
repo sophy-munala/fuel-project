@@ -56,7 +56,7 @@ if(isset($_POST['add_to_cart'])){
 			<div class="price"><?php echo $fetch_products['price'];?>/-</div>
 			<input type="number" min="10" name="product_quantity" placeholder="quantity" value="1" class="qty">
 			<input type="hidden" name="product_name" value="<?php echo $fetch_products['name'];?>">
-			<p><span>Availability:</span> In stock</p>
+			<p>Available: <span style="color:<?php if ($fetch_products ['quantity'] >= '1'){echo 'in stock';}else{echo'out of stoch';}?>;"><?php echo $fetch_products['quantity'];?></span></p>
 			<input type="hidden" name="product_price" value="<?php echo $fetch_products['price'];?>">
 			<input type="hidden" name="product_image" value="<?php echo $fetch_products['image'];?>"><br>
 			<input type="submit" value="add to cart" name="add_to_cart" class="btn">
@@ -86,7 +86,7 @@ if(isset($_POST['add_to_cart'])){
 			<div class="price"><?php echo $fetch_products['price'];?>/-</div>
 			<input type="number" min="1" name="product_quantity" placeholder="quantity" value="1" class="qty">
 			<input type="hidden" name="product_name" value="<?php echo $fetch_products['name'];?>">
-			<p><span>Availability:</span> In stock</p>
+			<p>Available: <span style="color:<?php if ($fetch_products ['quantity'] >= '1'){echo 'in stock';}else{echo'out of stoch';}?>;"><?php echo $fetch_products['quantity'];?></span></p>
 			<input type="hidden" name="product_price" value="<?php echo $fetch_products['price'];?>">
 			<input type="hidden" name="product_image" value="<?php echo $fetch_products['image'];?>"><br>
 			<input type="submit" value="add to cart" name="add_to_cart" class="btn">
